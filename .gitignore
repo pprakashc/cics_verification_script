@@ -1,0 +1,18 @@
+# z/OS specific
+*.lst
+*.log
+*.obj
+
+# Editor backups
+*~
+*.bak
+*.swp
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Output files
+output/
+*.out
