@@ -14,12 +14,9 @@
 //*   - YOUR.OUTPUT.LOG: Optional - save output to dataset
 //********************************************************************
 //STEP1    EXEC PGM=IKJEFT01
+//ISFPARMS DD DISP=SHR,DSN=HLQ.SISFPLIB 
 //SYSEXEC  DD DISP=SHR,DSN=YOUR.REXX.LIBRARY
 //SYSTSPRT DD SYSOUT=*
-//*SYSTSPRT DD DISP=(NEW,CATLG,DELETE),
-//*            DSN=YOUR.OUTPUT.LOG,
-//*            SPACE=(TRK,(5,5)),
-//*            DCB=(RECFM=FBA,LRECL=133,BLKSIZE=27930)
 //SYSTSIN  DD *
-  %CICSERR 'YOUR.CICS.REGION.LIST'
+  %CICSERR YOUR.CICS.REGION.LIST  /* lib optional
 /*
